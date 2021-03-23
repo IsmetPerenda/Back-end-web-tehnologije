@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple submit form</title>
+
+    <link href ="unosRasporeda.css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  </head>
+  <body>
+    <form name="forma"  onsubmit="return validateForm()">
+      <h1>Forma</h1>
+      <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="subjectName"><strong>Naziv predmeta</strong></label><br>
+        <input id = "naziv"type="text" name="subjectName" required><br>
+        <label for="activity" ><strong>Aktivnost</strong></label><br>
+        <input  id = "aktivnost"type="text" name="activity" required><br>
+        <label for="day"><strong>Dan</strong></label><br>
+        <input  id = "dan" type="text" name="day" required><br>
+        <label for="timeS"><strong>Vrijeme početka</strong></label><br>
+        <input  id = "pocetak" type="text" name="timeS" required><br>
+        <label for="timeE"><strong>Vrijeme kraja</strong></label><br>
+        <input  id = "kraj" type="text" name="timeE" required><br>
+      </div>
+      <button id="btn" type="button" onclick="dodavanje()">Submit</button>
+      </div>
+      <div id="tabelaPredmeti">
+
+      </div>
+      <div id="tabelaAktivnosti">
+
+      </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="ajaxServerAktivnosti.js"></script>
+    <script src="validacija.js"></script>
+  </body>
+</html>
